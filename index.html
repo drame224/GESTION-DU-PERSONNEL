@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion du Personnel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Accueil</a></li>
+            <li><a href="#" onclick="showSection('form')">Enregistrement</a></li>
+            <li><a href="#" onclick="showSection('search')">Recherche</a></li>
+            <li><a href="#" onclick="showSection('settings')">Paramètres</a></li>
+        </ul>
+    </nav>
+    
+    <div id="home" class="section active">
+        <h1>Bienvenue sur le site de Gestion du Personnel de al-Walid</h1>
+        <p>MOHAMED.</p>
+    </div>
+
+    <div id="form" class="section">
+        <h2>Enregistrer un Employé</h2>
+        <form id="employeeForm">
+            <label for="firstName">Prénom:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="lastName">Nom:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <label for="dob">Date de Naissance:</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="birthPlace">Lieu de Naissance:</label>
+            <input type="text" id="birthPlace" name="birthPlace" required>
+            
+            <label for="currentCity">Ville Actuelle:</label>
+            <input type="text" id="currentCity" name="currentCity" required>
+            
+            <label for="code">Code d'Identification:</label>
+            <input type="text" id="code" name="code" required>
+            
+            <button type="submit">Enregistrer</button>
+        </form>
+    </div>
+
+    <div id="search" class="section">
+        <h2>Rechercher un Employé</h2>
+        <label for="searchCode">Code d'Identification:</label>
+        <input type="text" id="searchCode" name="searchCode">
+        <button onclick="searchEmployee()">Rechercher</button>
+        <p id="result"></p>
+    </div>
+
+    <div id="settings" class="section">
+        <h2>Paramètres</h2>
+        <form id="updateForm">
+            <label for="updateCode">Code d'Identification:</label>
+            <input type="text" id="updateCode" name="updateCode" required>
+            
+            <label for="newName">Nouveau Nom:</label>
+            <input type="text" id="newName" name="newName">
+            
+            <label for="newCode">Nouveau Code d'Identification:</label>
+            <input type="text" id="newCode" name="newCode">
+            
+            <button type="button" onclick="updateEmployee()">Mettre à jour</button>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
